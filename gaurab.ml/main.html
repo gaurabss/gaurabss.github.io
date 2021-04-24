@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike ShowRoom</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Niconne&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Niconne&display=swap"
+        rel="stylesheet">
+        <style>
+            /* In navigation section */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content{
+  /* max-width: 1250px; */
+  margin: auto;
+  padding: 0 30px;
+  min-width: 200px;
+ 
+}
+
+
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  /* background-color: #1b1b1b; */
+}
+.navbar.sticky{
+  background: #1b1b1b;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  width: 20%;
+  border: 2px solid rgb(118, 124, 124);
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+.navbar .menu-list{
+  display: inline-flex;
+  
+}
+.menu-list li{
+    display: flex;
+  list-style: none;
+  justify-content: right;
+}
+.menu-list li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid rgb(118, 124, 124);
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+.menu-list li a:hover{
+  color: black;
+}
+
+/* In home section */
+#home{
+    /* height: 650px; */
+    position: relative;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    background-image: url('https://docs.google.com/uc?id=1WQl-cH2CW5UOqgWsliV9KJRzwIB_vc7j');
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: .7;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+.box{
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: center;
+    font-family: 'Cherry Swash', cursive;
+}
+
+
+/* for left box */
+.left_box{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    margin: 70px;
+    padding: 30px;
+    /* border: 2px solid red; */
+    width: 70%;
+    height: 300px;   
+}
+.left_box h1{
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    margin-top: 125px;
+
+}
+.left_box p{
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+/* for right box */
+.right_box{
+    margin: 30px;
+    padding: 30px;
+    width: 30%;
+    /* border: 2px solid blue; */
+}
+.right_box img{
+    height: 450px;
+}
+.right_box img:hover{
+    margin-top: -5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+/* for home section button */
+.button_second button{
+    height: 30px;
+    width: 145px;
+    background: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 17px;
+    margin: 10px;
+    font-family: 'Cherry Swash', cursive;
+}
+.button_second button a{
+    color: black;
+    text-decoration: none;
+}
+
+.button_second button:hover{
+    background-color: aqua;
+    color: rgb(2, 2, 2);
+    text-decoration: underline;
+    cursor: pointer;
+    transform: translateY(-5px);
+    opacity: 1;
+}
+
+
+/* in popularity section */
+#popularity{
+    margin-top: -45px;
+    position: relative;
+}
+#popularity::before{
+    content: "";
+    position: absolute;
+    background: url('https://docs.google.com/uc?id=1Uff7YjSYO64ILoKr7rmxikCxCpuYa-q7');
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .9;
+}
+.heading{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    color: white;
+}
+#popularity .box2{
+    display: flex;
+    text-align: center;
+    font-family: 'Cherry Swash', cursive;
+    color: white;
+}
+.smallbox1{
+    border: 2px solid blue;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.smallbox1:hover{
+    
+    transform: translateY(-10px);
+    opacity: 1;
+    transition-duration: .8s;
+}
+.smallbox1 img {
+    width: 247px;
+    height: 160px;
+}
+.smallbox1 h2{
+    background-color: aqua;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 10px;
+}
+.smallbox1 p{
+    font-size: 18px;
+    margin: 20px;
+    text-align: left;
+}
+.smallbox1 button{
+    padding: 5px;
+    background: none;
+    font-size: 18px;
+    font-family: 'Cherry Swash', cursive;
+    margin: 10px;
+    color: white;
+    border-radius: 10px;
+}
+.smallbox1 button a{
+    text-decoration: none;
+    color: white;
+}
+.smallbox1 button:hover{
+    background-color: rgb(129, 134, 134);
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#About{
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+}
+#About::before{
+    content: "";
+    position: absolute;
+    background-image: url('https://docs.google.com/uc?id=1cOqxdasBHvOD-UhzhSay9WCm8GacaGhQ');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .7;
+}
+#About .heading{
+    padding-top: 20px;
+}
+.heading{
+    color: rgb(34, 18, 18);
+}
+.About_box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 295px));
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.About_small_box{
+    padding: 2px;
+    height: 355px;
+    width: 300px;
+    margin-top: 20px;
+}
+.About_small_box h1{
+    margin-top: -10px;
+    padding-bottom: 5px;
+    text-decoration: underline;
+}
+.About_small_box img{
+    width: 170px;
+    height: 105px;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+#About_box{
+    margin: 10px;
+    display: flex;
+    border: 2px solid #020202;
+    border-radius: 10px;
+    background:none;
+}
+#About_box:hover{
+    transform: translateY(-5px);
+    z-index: 1;
+    transition-duration: .5s;
+}
+.About_but {
+    margin-top: 20px;
+    height: 26px;
+    width: 85px;
+    font-size: 15px;
+    background: none;
+    border-radius: 7px;
+    border: 1px solid aqua;
+}
+.About_but a{
+    text-decoration: none;
+    color: black;
+}
+
+.About_but a:hover {
+    border-radius: 7px;
+    /* background-color: black; */
+    color: rgb(63, 16, 117);
+    cursor: pointer;
+    text-decoration: underline;
+    transform: translateY(-3px);
+    z-index: 1;
+}
+.About_small_box p{
+    font-size: 15px;
+}
+
+
+/* In form section */
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#form::before{
+    content: "";
+    position: absolute;
+    background-image: url(https://docs.google.com/uc?id=1qtcnecw5n8seAlGWn_oKnm7_gEmCtuYO);
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+    z-index: -1;
+    background-size: cover;
+}
+.forms input, .forms textarea{
+    display: flex;
+    width: 100%;
+    height: 25px;
+    font-size: 17px;
+    background: none;
+    border-radius: 10px;
+    padding: 3px 10px;
+    border: 2px solid aqua;
+}
+.forms textarea{
+    height: 210px;
+}
+.forms label{
+    font-size: 18px;
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+
+}
+footer a:hover{
+    color: aqua;
+    text-decoration: underline;
+
+}
+@media only screen and (max-width:1128px){
+    
+    .search{
+        display: none;
+    }
+    .nav_bar{
+        width: 100%;
+    }
+    .left_box{
+        margin: 70px 0px;
+        padding: 10px 5px;
+    }
+    .left_box p {
+        font-size: 18px;
+        padding: 10px;
+    }
+    #popularity .box2{
+        flex-wrap: wrap;
+    }
+    .smallbox1 h2{
+        margin: 13px 25%;
+    }
+}
+@media only screen and (max-width:1000px){
+    .navbar .menu-list{
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        /* margin: auto; */
+    }
+    .menu-list li a{
+        justify-content: center;
+    }
+    .navbar .logo a{
+        display: none;
+        /* width: 0%; */
+    }
+    .box{
+        flex-wrap: wrap;
+    }
+    .left_box p{
+        padding: 0px;
+    }
+    .smallbox1 h2{
+        margin: 13px 25%;
+    }
+}
+
+@media only screen and (max-width:604px){
+    .menu-list li a {
+        /* padding: -1px 10px; */
+        margin-left:4px;
+        font-size: 14px;
+        border: none;
+
+    }
+
+    .left_box h1 {
+        font-size: 20px;
+    }
+    .left_box p {
+        font-size: 12px;
+    }
+    .button_second button {
+        height: 21px;
+        width: 98px;
+        background: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 11px;
+        margin: 10px;
+        font-family: 'Cherry Swash', cursive;
+    }
+    .right_box img {
+        height: 279px;
+    }
+    .right_box {
+        margin:6px ;
+        padding: 38px ;
+        /* position: absolute; */
+        width: 70%;
+    }
+    
+    .left_box {
+        margin: 41px 0px;
+    }
+    .heading {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 11px;
+        text-decoration: underline;
+        color: white;
+    }
+    .smallbox1 h2 {
+        font-size: 14px;
+        background-color: aqua;
+        color: black;
+        border: 2px solid black;
+        border-radius: 20px;
+        margin: 13px 20%;
+    }
+    .smallbox1 p {
+        font-size: 12px;
+        margin: 13px;
+        text-align: left;
+    }
+    .smallbox1 button {
+        padding: 3px;
+        background: none;
+        font-size: 13px;
+        font-family: 'Cherry Swash', cursive;
+        margin: 3px;
+        color: white;
+        border-radius: 10px;
+    }
+    .About_small_box h1{
+        font-size: 15px;
+    }
+    .About_small_box p {
+        font-size: 12px;
+    }
+    .forms label {
+        font-size: 14px;
+    }
+    footer{
+
+        font-size: 12px;
+    }
+    .About_but{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+}
+@media only screen and (max-width:395px){
+
+    .menu-list li a {
+        margin-left: 0px;
+        font-size: 12px;
+        border: none;
+    }
+    .left_box h1 {
+        font-size: 17px;
+    }
+    .left_box {
+        margin: 30px 0px;
+    }
+    .left_box p {
+        font-size: 10px;
+    }
+    .button_second button {
+        height: 17px;
+        width: 80px;
+        background: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 9px;
+        margin: 5px;
+        font-family: 'Cherry Swash', cursive;
+    }
+    .left_box {
+        margin: 70px 0px;
+        padding: 5px 0px;
+    }
+    .menu-list li a {
+        font-weight: 300;
+    }
+    .left_box {
+        margin: 30px 0px;
+        padding: 5px 0px;
+    }
+    .menu-list li a{
+        padding: 0px 6px;
+    }
+}
+        </style>
+</head>
+
+<body>
+    <!-- for navigation section  -->
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="#">Gaurav</a>
+            </div>
+            <ul class="menu-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#popularity">popular</a></li>
+                <li><a href="#form">Form</a></li>
+                <li><a href="https://www.bajajauto.com/motor-bikes/pulsar" target="_blank">Features</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- for home section -->
+    <section id="home">
+        <div class="box">
+            <div class="left_box">
+                <h1>
+                    Introduction
+                </h1>
+                <p>Bajaj Auto Limited is an Indian multinational two-wheeler and three-wheeler manufacturing company
+                    based in Pune, Maharashtra. It manufactures motorcycles, scooters and auto rickshaws. Bajaj Auto is
+                    a part of the Bajaj Group. It was founded by Jamnalal Bajaj in Rajasthan in the 1940s.
+                </p>
+                <div class="button_second">
+                    <button><a href="#popularity"> Recommended </a></button>
+                    <button><a href="https://www.youtube.com/watch?v=NtGVC6fCQBQ" target="_blank">Review</a>
+                    </button>
+                </div>
+            </div>
+            <div class="right_box">
+                <a href="#popularity">
+                    <img src="https://docs.google.com/uc?id=1o_nOXa-ZxO1ozmhtCtUkFU13uOx7w9T7" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- in popular bikes section -->
+    <section id="popularity">
+        <h1 class="heading">Most Populer model in Nepal</h1>
+
+        <div class="box2">
+            <div class="smallbox1">
+                <h2>Bajaj Pulsar 220 F</h2>
+                <img src="https://docs.google.com/uc?id=1e_63Ad4YdZ-Ijgpu4YDgzu5Nejs2QL-G" alt=""> <br>
+                <p>
+                    This was once the fastest Bajaj motorcycle of its time, Bajaj Pulsar 220 F. <br>
+
+                    Bajaj Pulsar 220F is powered by a 220cc 4-stroke, 2-Valve, Twin Spark, Oil cooled, DTS-I Engine. It
+                    can
+                    generate a max power of 20.93PS at 8500rpm and a max torque of 18.55Nm at 7000rpm. Moreover, it is
+                    mated
+                    to a 5-speed gearbox with a 15-liter fuel tank capacity. <br>
+                </p>
+                <button><a href="https://techlekh.com/bajaj-bikes-price-nepal/#bajaj-pulsar-220-f" target="_blank">More Info.</a></button>
+            </div>
+            <div class="smallbox1">
+                <h2>Bajaj Pulsar NS 200</h2>
+                <img src="https://docs.google.com/uc?id=1HwZqWcNFWYlhTJb1aFD2TD1Ro3LjKibe" alt=""> <br>
+                <p>Let’s talk about one of the best-selloling 200cc bikes in Nepal, Bajaj Pulsar NS 200! <br>
+
+                    Bajaj Pulsar NS200 is powered by a 199.6cc, 4-valve, triple-spark, and liquid-cooled engine.
+                    Furthermore, it can generate a max power of 23.5PS at 9500rpm and max torque of 18.3Nm at 8000rpm.
+                    Additionally, it is mated to a 6-speed gearbox with a 12-liter fuel tank.</p>
+                <button><a href="https://techlekh.com/bajaj-bikes-price-nepal/#bajaj-pulsar-200-ns" target="_blank">More Info.</a></button>
+            </div>
+            <div class="smallbox1">
+                <h2>Bajaj Pulsar 150</h2>
+                <img src="https://docs.google.com/uc?id=1e76llUKAaWfee9FFg2f_9gQ-fNPFe5lQ" alt=""> <br>
+                <p>Let’s talk about the OG that started it all, Bajaj Pulsar 150. <br>
+
+                    Bajaj Pulsar 150 is powered by a 149.5cc Twin Spark DTS-I Engine. It can generate a max power of 14
+                    PS at 8000rpm and a max torque of 13.4Nm at 6000rpm. Moreover, it is mated to a 5-speed gearbox with
+                    a 15-liter fuel tank.</p>
+                <button><a href="https://techlekh.com/bajaj-bikes-price-nepal/#bajaj-pulsar-150" target="_blank">More Info.</a></button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- in all bike models section  -->
+    <section id="About">
+        <h1 class="heading">
+            We Have
+        </h1>
+        <div class="About_box">
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1>Pulsar SS400</h1>
+                    <img src="https://docs.google.com/uc?id=1kUU0g5lQqiBV0gMpTcxHTSme-ne3ySX_" alt="">
+                    <p>This SS400 variant comes with an engine putting out and of max power and max torque respectively.</p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1>Avenger Street 160</h1>
+                    <img src="https://docs.google.com/uc?id=1h1IeA15D8ZqIq3APcFYgT89x8FaNu25H" alt="">
+                    <p>Bajaj Avenger Street 160 is powered by a 160.37cc Single Cylinder, 2-valve, air-cooled, DTS-I Engine. </p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1>This is heading</h1>
+                    <img src="https://docs.google.com/uc?id=1g0HAgMWLn-FxjBzWrQOtrRutipc7wlnb" alt="">
+                    <p>Bajaj Avengers 220 Cruise is powered by a 220cc oil-cooled DTS-i engine. It can generate a max power of 19.03PS.</p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1> Discover 125 ST</h1>
+                    <img src="https://docs.google.com/uc?id=14WFS54qBQsc-C_PZsRuwIswShm2RfLxS" alt="">
+                    <p>Starting with Bajaj Discover 125 ST, it is powered by a 124.6cc, 4-valve, Twin-Spark DTS-I Engine. It can generate a max power of 13PS.</p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1>Discover 125</h1>
+                    <img src="https://docs.google.com/uc?id=1ZHsqZZrfm4trssEsMiFvxtIUXW-cfykU" alt="">
+                    <p>Bajaj Discover 125 is powered by a 124.5cc, air-cooled, SOHC, DTS-I Engine. It can generate a max power of 11PS.</p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1>Dominar 250</h1>
+                    <img src="https://docs.google.com/uc?id=1yujcrOcAX0Z4nIw590CAHgQnFcdJzQle" alt="">
+                    <p>Bajaj Dominar 250 is powered by a 248.77cc, Single-Cylinder,Liquid-Cooled, 4-Valve, DOHC Engine. It can generate max-power of 27PS.</p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1>Dominar 400</h1>
+                    <img src="https://docs.google.com/uc?id=1dKsfZYbIPT2MaTndC5ZAxgzCgTrfLBeq" alt="">
+                    <p>Bajaj Dominar 400 is powered by a 373.3cc Single Cylinder, Liquid-cooled, DOHC, 4V, Triple Spark, and FI engine.</p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1>Platina 100ES</h1>
+                    <img src="https://docs.google.com/uc?id=1E3qTezU1VqAWDpudvbGGpZqxOZHlwKQS" alt="">
+                    <p>Bajaj Platina 100 ES is powered by a 102cc DTS-I engine which can generate a max power of 8.02PS.</p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1>Pulsar 150</h1>
+                    <img src="https://docs.google.com/uc?id=1R-JnwK3MJV9PnHzmnpi08-Gr1l1py4UF" alt="">
+                    <p>Bajaj Pulsar 150 is powered by a 149.5cc Twin Spark DTS-I Engine. It can generate a max power of 14 PS.</p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1>Pulsar 160 NS</h1>
+                    <img src="https://docs.google.com/uc?id=1q7USBfN6I2rCEJOFY-lU-PxFcUaDKzv3" alt="">
+                    <p>Bajaj Pulsar NS 160 is powered by a 160.3cc 4-valve, Oil-Cooled, and Twin-Spark DTS-I engine. It can generate a max power of 15.5PS.</p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1>Pulsar 220 F</h1>
+                    <img src="https://docs.google.com/uc?id=1e_63Ad4YdZ-Ijgpu4YDgzu5Nejs2QL-G" alt="">
+                    <p>Bajaj Pulsar 220F is powered by a 220cc 4-stroke, 2-Valve, Twin Spark, Oil cooled, DTS-I Engine. It can generate a max power of 20.93PS</p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+            <div id="About_box">
+                <div class="About_small_box">
+                    <h1>Pulsar NS 200</h1>
+                    <img src="https://docs.google.com/uc?id=1ipsutVYj0CBdgGe2POTwHq-b67vEy79j" alt="">
+                    <p>Bajaj Pulsar NS200 is powered by a 199.6cc, 4-valve, triple-spark, and liquid-cooled engine. Furthermore, it can generate a max power of 23.5PS</p>
+                    <button class="About_but"> <a href="https://hamrobazaar.com/c63-automobiles-motorcycle-bajaj" target="_blank">Order Now</a> </button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- in form model  -->
+    <section id="form">
+        <h1 class="heading">Submit It for Order</h1>
+        <form action="#">
+            <div class="forms">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Your name">
+            </div>
+
+            <div class="forms">
+                <label for="Address">Address:</label>
+                <input type="text" name="Address" id="Address" placeholder="Your Address">
+            </div>
+
+            <div class="forms">
+                <label for="Phome_number">Phome Number:</label>
+                <input type="number" name="Phome_number" id="Phome_number" placeholder="Your Phome Number">
+            </div>
+            <div class="forms">
+                <label for="Email">Email:</label>
+                <input type="email" name="Email" id="Email" placeholder="Your Email">
+            </div>
+            <div class="forms">
+                <label for="discription">Discription:</label>
+                <textarea name="discription" id="discription" cols="30" rows="10"
+                    placeholder="write hear what types of bike do you want?"></textarea>
+                <button class="About_but"> <a href="https://techlekh.com/bajaj-bikes-price-nepal/#bajaj-dominar-400-abs" target="_blank"> Submit </a></button>
+            </div>
+        </form>
+    </section>
+
+
+    <!-- fir contact  section -->
+    <footer>Copyright &copy;2021 <a href="https://www.facebook.com/gaurav.sunar.188" target="_blank">
+            Gaurabsunar9@gmail.com.</a> All rights are reserved.</footer>
+
+</body>
+
+</html>

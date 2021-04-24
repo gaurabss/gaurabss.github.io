@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THis is Bus</title>
+    <style>
+        /* reset page  */
+        *{
+            padding: 0px;
+            margin: 0 px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        /* for navigation section  */
+        .navigation{
+            margin: 2px;
+            display: flex;
+            position: relative;
+            /* justify-content: center; */
+            align-items: center;
+
+        }
+        .navigation::before{
+            content: "";
+            position: absolute;
+            background-color: blue;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: .5;
+        }
+        .nav_bar ul{
+            display: flex;
+        }
+        .nav_bar li{
+            list-style: none;
+            padding: 20px;
+
+        }
+        .nav_bar li a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <div class="logo">
+
+            i am navigation
+        </div>
+        <div class="nav_bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            i am contact
+        </div>
+    </nav>
+</body>
+</html>
